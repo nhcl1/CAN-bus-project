@@ -30,11 +30,13 @@ The idea behind the final project was to use CAN bus, that is available in the m
 ## Description
 The master device used in the project is an EK-TM4C123GXL development board and the slave device used is an EK-TM4C1294XL development board; the first one has the TM4C123GH6PM microcontroller powering it while the latter has the TM4C1294NCPDT. The reason these boards were chosen was because the microcontroller in these boards had CAN module built into it. The project also needed two MCP2551 transceivers, one for each board. A simple motor driver, ULN2003, was also needed to drive the 6V DC motor since the maximum voltage out of the development board was 5V. The following high level block diagram followed by pictures of the circuit diagram illustrates the layout of the project.
 
+![Block Diagram](./images/block-diagram.jpg)
+
 ### Master Board
   The ADC available inside TM4C123GH6PM is a 12-bit ADC. The speed of the DC motor is controlled via a 10kΩ potentiometer interfaced to the GPIO of the processor. The analog output of the potentiometer is configured as an input to the ADC; ADC converts this data into 12-bit digital data which is used to setup the PWM width. Since the ADC is 12-bit, the highest count can be till 4096, therefore the period of PWM output is set to 4096 to match that of ADC. The generated PWM signal controls the DC motor connected through the ULN2003 motor driver. 
 PWM calculation done so that frequency doesn’t go overboard what the DC motor can handle. The motor didn’t come with a datasheet, so a decision was made after reading bunch of forum posts to drive it with a low frequency. 
 
-----------------formulas ----------------
+![Formula](./images/formula.jpg)
 
 ** I expect this frequency is what I would have seen on an oscilloscope if I had connected the PWM output pin to it. 
 
