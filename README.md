@@ -70,7 +70,7 @@ PWM calculation done so that frequency doesn’t go overboard what the DC motor 
 
 ![Formula](./images/formula.jpg)
 
-** I expect this frequency is what I would have seen on an oscilloscope if I had connected the PWM output pin to it. 
+** Unfortunately due to Covid-19, I didn't have access to the oscilloscopes in the university labs; I expect this frequency is what I would have seen on an oscilloscope if I had connected the PWM output pin to it. 
 
 The code is setup to send the 32 bits of data over the CAN bus. Texas Instruments(TI) provides a high-level API library known as Tivaware which comes with a message struct that handles the message structure. The ADC value that needs to be sent over is a 32-bit value, but the transmitting message object data can only be 8-bits. Hence an 8-bit pointer was created inside the while(1) loop to point to the ADC value, and the message was later appended before being sent out over CAN bus.
 The UART is also configured in this project only to serve the purpose of sending the data from the board to the terminal in the computer. It has nothing to do with any sort of data transfer between the boards.
