@@ -78,7 +78,7 @@ The UART is also configured in this project only to serve the purpose of sending
 ### Slave Board
   The data received by the EK-TM4C1294XL is of 32-bit size. A 32-bit sized FIFO buffer was setup using a circular array which holds all the incoming message. Inside the CAN interrupt handler, another pointer was used to access this FIFO buffer and print the message over UART to the terminal. Another tricky part about setting it up with a FIFO buffer was to include the following code: 
 
--picture
+![code](./images/code-snip.jpg)
 
 This took care of setting up CAN message object for the way the FIFO buffer was set up. Every time there is an incoming message, each 8-bit message object gets stored in the FIFO buffer. Then it is printed out in FIFO manner as well over UART.
 
