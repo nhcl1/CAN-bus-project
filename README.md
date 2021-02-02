@@ -32,27 +32,31 @@ The master device used in the project is an EK-TM4C123GXL development board and 
 
 <figure>
   <img src="./images/block-diagram.jpg"
-        alt="Block Diagram">
+        alt="Block Diagram" />
  <figcaption><b>Figure 1 : Block Diagram</b></figcaption>
 </figure>
+&nbsp;
 <figure>
   <img
   src="./images/board1.jpg"
-  alt="Complete Circuit">
- <figcaption><b>Figure 2 : Complete Circuit</b></figcaption>
+  alt="Complete Circuit" />
+ <figcaption style="padding-bottom: 1px;"><b>Figure 2 : Complete Circuit</b></figcaption>
 </figure>
+&nbsp;
 <figure>
   <img
   src="./images/board2.jpg"
   alt="Master Device EK-TM4C123GXL">
  <figcaption><b>Figure 3 : Master Device EK-TM4C123GXL</b></figcaption>
 </figure>
+&nbsp;
 <figure>
   <img
   src="./images/board3.jpg"
   alt="Slave Device EK-TM4C1294XL">
  <figcaption><b>Figure 4 : Slave Device EK-TM4C1294XL</b></figcaption>
 </figure>
+&nbsp;
 <figure>
   <img
   src="./images/board4.jpg"
